@@ -20,9 +20,9 @@ public class AddCustomerTest {
 	String company = exlReader.getCellData("Sheet1", "Company", 2);
 	String Email = exlReader.getCellData("Sheet1", "email", 2);
 	String Number = exlReader.getCellData("Sheet1", "number", 2);
-	String address = exlReader.getCellData("Sheet1", "Address", 2);
+	String address = exlReader.getCellData("Sheet1", "address", 2);
 	String City = exlReader.getCellData("Sheet1", "city", 2);
-	String state = exlReader.getCellData("Sheet1", "State", 2);
+	String state = exlReader.getCellData("Sheet1", "state", 2);
 	String Zip = exlReader.getCellData("Sheet1", "zip", 2);
 	String Group = exlReader.getCellData("Sheet2", "group", 2);
 	String Country = exlReader.getCellData("Sheet2", "country", 2);
@@ -47,6 +47,7 @@ public class AddCustomerTest {
 			addcustomer.enterCompanyName(company);
 			addcustomer.enteremail(Email);
 			addcustomer.enterphoneNumber(Number);
+			Thread.sleep(2000);
 			addcustomer.enteraddress(address);
 			addcustomer.enterCityname(City);
 			addcustomer.enterstatename(state);
@@ -61,7 +62,7 @@ public class AddCustomerTest {
 			
 			
 			
-			//BrowserFactory.tearDown();
+			BrowserFactory.tearDown();
 			
 }
 }
