@@ -115,11 +115,17 @@ public class AddcustomerPage extends BasePage {
 			waitForElement(driver, 3, COUNTRY_DROPDOWN__ELEMENT);
 			COUNTRY_DROPDOWN__ELEMENT.sendKeys(country);
 		}
+		
+		
 	
 	public void clicksavebuttonlocator() throws InterruptedException {
 		Thread.sleep(2000);
 		SAVE_BUTTON_LOCATOR.click();
 	}
+//	public void validatesuccessmsg() {
+		//Assert.assertEquals(actual, expected, message);
+	//}
+
 	public void clicklistcustomerbutton() throws InterruptedException {
 		Thread.sleep(2000);
 		LIST_CUSTOMER_BUTTON_LOCATOR.click();
@@ -144,9 +150,10 @@ public class AddcustomerPage extends BasePage {
 			if(name.contains(enteredname1)) { 
 				System.out.println("Entered name exist.");
 				driver.findElement(By.xpath("//tbody/tr[1]/td[3]/following-sibling::td[4]/a[2]")).click();
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/button[2]")).click();
-				
+				////*[@id="page-wrapper"]/div[3]/div[1]
+			
 			}
 			
 			
